@@ -44,30 +44,39 @@ const titleClickHandler = function(event){
   }
 
 const otpArticleSelector = '.post',
-  optTitleSelector = '.post-titles',
+  optTitleSelector = '.post-title',
   optTitleListSelector = '.titles';
 
 function generateTitleLinks(){
-  console.log(generateTitleLinks);
+  //console.log(generateTitleLinks);
 
 
-  /*remove content of titleList*/
+  /* [DONE] remove content of titleList*/
   const titleList = document.querySelector(optTitleListSelector);
     titleList.innerHTML = '';
     console.log('usunieto: ', titleList);
   
 
-  /*for each article*/
-
+  /* [IN PROGRESS] for each article*/
+  const articles = document.querySelectorAll(otpArticleSelector);
+  console.log('article: ', articles);
+  for(let article of articles){
+   
     /*get the article id*/
-
-    /*find the title element*/
+    const articleId = article.getAttribute('id');
+    console.log('articleId: ', articleId);
+    
+    /*find the title element & get the title from the title element*/
+    const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+    console.log('articleTitle: ', articleTitle);
 
     /*get the title from the title element*/
 
     /*creat HTML of the link*/
 
     /*insert link into titleList*/
+  }
+    
 
 }
 generateTitleLinks();
