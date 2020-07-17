@@ -71,10 +71,12 @@ function generateTitleLinks(){
     console.log('articleTitle: ', articleTitle);
 
     /*creat HTML of the link*/
-    const linkHTML = '<li><a href="# + '+ articleId +'"><span>'+ articleTitle +'</span></a></li>';
+    const linkHTML = '<li><a href="#'+ articleId +'"><span>'+ articleTitle +'</span></a></li>';
     console.log('linkHTML: ', linkHTML);
 
     /*insert link into titleList*/
+    titleList.insertAdjacentHTML('beforeend', linkHTML);
+
   } 
     
 
